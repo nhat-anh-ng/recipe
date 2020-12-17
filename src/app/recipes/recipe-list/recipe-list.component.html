@@ -1,15 +1,11 @@
 <div>
   <button>New Recipe</button>
 </div>
+<hr />
 <div>
-  <a href="#" *ngFor="let recipe of recipes">
-    <div>
-      <h4>{{ recipe.name }}</h4>
-      <p>{{ recipe.description }}</p>
-    </div>
-    <span>
-      <img [src]="recipe.imagePath" alt="{{ recipe.name }}" />
-    </span>
-  </a>
-  <app-recipe-item></app-recipe-item>
+  <app-recipe-item
+    *ngFor="let recipeEl of recipes"
+    [recipe]="recipeEl"
+    (recipeSelected)="onRecipeSelected(recipeEl)"
+  ></app-recipe-item>
 </div>

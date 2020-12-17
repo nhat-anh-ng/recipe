@@ -1,1 +1,18 @@
-<p>recipe-detail works!</p>
+<div>
+  <img [src]="recipe.imagePath" alt=" {{ recipe.name }}" />
+</div>
+
+<div>
+  <h1>{{ recipe.name }}</h1>
+</div>
+
+<div>
+  <button>Manage Recipe <span></span></button>
+  <ul>
+    <li><a href="#">To Shopping List</a></li>
+    <li><a href="#">Edit Recipe</a></li>
+    <li><a href="#">Delete Recipe</a></li>
+  </ul>
+</div>
+<div>Description {{ recipe.description }}</div>
+<div>Ingredients</div>
