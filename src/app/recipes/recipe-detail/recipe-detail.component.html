@@ -14,5 +14,11 @@
     <li><a href="#">Delete Recipe</a></li>
   </ul>
 </div>
-<div>Description {{ recipe.description }}</div>
-<div>Ingredients</div>
+<div>{{ recipe.description }}</div>
+<div>
+  <ul>
+    <li *ngFor="let ingredient of recipe.ingredients">
+      {{ ingredient.name }} - {{ ingredient.amount }}
+    </li>
+  </ul>
+</div>
