@@ -4,8 +4,10 @@
 
 <div>
   <ul>
-    <li><a href="#" (click)="onSelect('recipe')">Recipes</a></li>
-    <li><a href="#" (click)="onSelect('Shopping-list')">Shopping List</a></li>
+    <li routerLinkActive="active"><a routerLink="/recipes">Recipes</a></li>
+    <li routerLinkActive="active">
+      <a routerLink="/shopping-list">Shopping List</a>
+    </li>
   </ul>
   <ul>
     <li appDropdown>
